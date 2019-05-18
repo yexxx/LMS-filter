@@ -41,4 +41,7 @@ data_after_process[:,1],_,_ = LMSFilter(data_with_noise[:,1],dn2,M,mu,err)
 if (os.path.exists(path_after_process)==0):
     sf.write(path_after_process, data_with_noise, samplerate)
     print("done!\n")
+else:
+    sf.write(path_after_process + ".bak", data_with_noise, samplerate)
+    print("already exist,done with saving with \'.bak\'\n")
 
