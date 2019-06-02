@@ -32,7 +32,7 @@ def LMSFilter(xn,dn,M,mu,err):
 dn,_ = sf.read('Paragon.flac')
 dn1 = dn[:,0]
 dn2 = dn[:,1]
-M = 100
+M = 20
 mu = 1e-6
 err = 100
 data_after_process = data_with_noise

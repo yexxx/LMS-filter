@@ -14,7 +14,7 @@ def plot(length,dir,title):
 if(len(sys.argv)>1):
     length = int(sys.argv[1])
 else: 
-    length = 200
+    length = 500
 
 data,_ = sf.read('Paragon.flac')
 rand = np.int(np.random.rand()*(data.shape[0]-length-1))
@@ -26,4 +26,5 @@ plt.subplot(3,1,2)
 plot(length,'Paragon_with_noise.flac',"With_Noise")
 plt.subplot(3,1,3)
 plot(length,'Paragon_after_process.flac',"After_Process")
+plt.savefig("3.png",format = "png")
 plt.show()
